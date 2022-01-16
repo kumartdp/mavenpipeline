@@ -1,5 +1,5 @@
  def pipeline
-    node('jenkins-worker') {
+    node('jenkins-master') {
         dir('mavenpipeline')
         {
         git credentialsId: '' , branch: 'master', url: 'https://github.com/kumartdp/mavenpipeline.git'
