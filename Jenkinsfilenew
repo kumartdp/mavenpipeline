@@ -1,6 +1,10 @@
  def pipeline
     node('jenkins-worker') {
-        pipeline = load 'pipeline.groovy'
+        dir('mavenpipeline')
+        {
+        git branch: 'master', url: 'https://github.com/kumartdp/mavenpipeline.git'
+         }
+        pipeline = load 'mavenpipeline/pipeline.groovy'
         pipeline.helloworld()
         pipeline.addition()
         pipeline.build()
