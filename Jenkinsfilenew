@@ -1,5 +1,5 @@
  def pipeline
-    node('worker1') {
+    node('jenkins-worker') {
         pipeline = load 'pipeline.groovy'
         pipeline.helloworld()
         pipeline.addition()
