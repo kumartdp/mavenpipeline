@@ -1,5 +1,10 @@
  def pipeline
-    node('slave') {
+    node('worker1') {
         pipeline = load 'pipeline.groovy'
-        pipeline.functionA()
+        pipeline.helloworld()
+        pipeline.addition()
+        pipeline.build()
+        pipeline.deployimage()
+        
+        
     }
