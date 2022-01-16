@@ -2,7 +2,7 @@
     node('jenkins-worker') {
         dir('mavenpipeline')
         {
-        git credentialsId: ''  branch: 'master', url: 'https://github.com/kumartdp/mavenpipeline.git'
+        git credentialsId: '' , branch: 'master', url: 'https://github.com/kumartdp/mavenpipeline.git'
          }
         pipeline = load 'mavenpipeline/pipeline.groovy'
         pipeline.helloworld()
