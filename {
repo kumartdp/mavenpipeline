@@ -1,0 +1,43 @@
+Script started on 2022-01-16 20:11:46+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+      }
+    }
+    }
+    
+    
+   
+}]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$           docker.withRegistry( '', registryCredential ) {
+bash: syntax error near unexpected token `'','
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$             dockerImage.push()
+>           }
+bash: syntax error near unexpected token `}'
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$         }
+bash: syntax error near unexpected token `}'
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$       }
+bash: syntax error near unexpected token `}'
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$     }
+bash: syntax error near unexpected token `}'
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$     }
+bash: syntax error near unexpected token `}'
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$     
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$     
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$    
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$ }[K
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$ touch Jenkinsfile
+]0;saikgm@5CG0263ZXH: ~/mavenpipeline[01;32msaikgm@5CG0263ZXH[00m:[01;34m~/mavenpipeline[00m$ vim Jenkinsfile
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"Jenkinsfile" 0L, 0C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1[9CAll[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[27m[23m[29m[m[H[2J[?25l[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1[9CAll"Jenkinsfile" 0L, 0C[1;1H[?25h[?25l[24;53Hi[1;1H[24;53H [1;1H[24;1H[1m-- INSERT --[m[24;13H[K[24;63H0,1[11CAll[1;1H[?25h[?25l
+pipeline {[2;11H[K[3;1H    [3;5H[K[4;1H    environment {[4;18H[K[5;1H    registry = "saikumarzemoso[5;31H[K[5;31H[?25h[?25l/mavenimage"
+    registryCredential = 'dockerid'[6;36H[K[7;1H  }[7;4H[K[8;1H    agent any[8;14H[K[9;1H [9;2H[K[9;2H[?25h[?25l
+    stages{[10;12H[K[11;1H        [11;9H[K[12;1H        [12;9H[K[13;1H        stage("checkout") {[13;28H[K[14;1H    [14;5H[K[14;5H[?25h[?25l
+            steps {[15;20H[K[16;1H                [16;17H[K[17;1H                git[17;20H[K[17;20H[?25h[?25l  url:' https://github.com/paulczar/spring-helloworld.git'
+      [18;7H[K[18;7H[?25h[?25l      }
+        }[19;10H[K[20;1H        [20;9H[K[21;1H        stage("build") {[21;25H[K[22;1H            [22;13H[K[22;13H[?25h[?25l
+            steps{[23;19H[K[1;23r[1;1H[2M[1;24r[23;17Hsh " mvn clean[24;11H[1m(paste) --[m[24;63H[K[23;32H[?25h[?25linstall"[23;9H[?25h[?25l[1;23r[1;1H[5M[1;24r[20;13H}[21;9H}[23;10Hstage("test") { [?25h[?25l[1;23r[1;1H[4M[1;24r[21;13Hsteps{[23;17Hsh " mvn test"[23;7H[?25h[?25l[1;23r[1;1H[3M[1;24r[22;13H}[23;9H}   [?25h[?25l[1;23r[1;1H[4M[1;24r[21;9Hstage('Building image') {[22;7Hsteps{[23;9Hscript {[33C[?25h[?25l[1;23r[23;1H
+[1;24r[23;11HdockerImage = docker.build registry + ":$BUILD_NUMBER"[23;24H[?25h[?25l[1;23r[1;1H[4M[1;24r[20;9H}[21;7H}
+    }
+    stage('Deploy Image') { [?25h[?25l[1;23r[1;1H[3M[1;24r[21;7Hsteps{[22;9Hscript {[23;11Hdocker.withRegistry( '', registryCredential ) {  [?25h[?25l[1;23r[1;1H[10M[1;24r[14;13HdockerImage.push()[15;11H}[16;9H}[17;7H}
+    }
+    }[23;1H}[24;11H[1m--a[m[24;13H[K[24;63H59,2[10CBot[23;2H[?25h[24;1H[K[23;1H[?25l[24;53H^[[23;1H[24;53H  [23;2H[24;63H59,1[10CBot[23;1H[?25h[?25l[24;53H:[23;1H[24;53H[K[24;1H:[?2004h[?25hwwq[?25l[97m[41mE4
