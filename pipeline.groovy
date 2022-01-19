@@ -27,6 +27,8 @@ def build() {
 	def registry = "saikumarzemoso/mavenimage"
     def   registryCredential = 'dockerid'
 	
+	def VERSION = readMavenPom().getVersion()
+	
 	 node('jenkins-master') {
 		 
 		
@@ -58,7 +60,7 @@ def build() {
 		 
  stage('Building image') {
       
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build registry + VERSION+":$BUILD_NUMBER"
         
     }
     stage('Deploy Image') {
