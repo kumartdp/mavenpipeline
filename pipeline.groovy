@@ -24,6 +24,9 @@ def addition() {
 
 def build() {
 	
+	def registry = "saikumarzemoso/mavenimage"
+    def   registryCredential = 'dockerid'
+	
 	 node('jenkins-master') {
 		 
 		
