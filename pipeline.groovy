@@ -23,6 +23,14 @@ def addition() {
 
 
 def build() {
+	
+	 node('jenkins-master') {
+		 
+		 stage("build")
+		 {
+			 echo "helloworld"
+		 }
+	 }
   
    echo "helloworld"
   
