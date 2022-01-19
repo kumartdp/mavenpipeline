@@ -60,7 +60,7 @@ def build() {
 		 
  stage('Building image') {
       
-          dockerImage = docker.build registry + " "+ VERSION+":$BUILD_NUMBER"
+          dockerImage = docker.build registry + ":"+ VERSION+".$BUILD_NUMBER"
         
     }
     stage('Deploy Image') {
