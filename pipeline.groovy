@@ -52,6 +52,18 @@ def build() {
             
             
         }
+		 
+ stage('Building image') {
+      
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        
+    }
+    stage('Deploy Image') {
+  
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        
         
 	 }
   
