@@ -1,10 +1,10 @@
-
+def pipeline
     node('jenkins-master') {
         dir('mavenpipeline')
         {
         git credentialsId: '' , branch: 'master', url: 'https://github.com/kumartdp/mavenpipeline.git'
          }
-       def pipeline = load 'mavenpipeline/pipeline.groovy'
+        pipeline = load 'mavenpipeline/pipeline.groovy'
         pipeline.helloworld()
         pipeline.addition()
         pipeline.build()
