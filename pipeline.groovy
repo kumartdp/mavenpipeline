@@ -26,10 +26,34 @@ def build() {
 	
 	 node('jenkins-master') {
 		 
-		 stage("build")
-		 {
-			 echo "helloworld"
-		 }
+		
+		 
+		         stage("checkout") {
+            
+            steps {
+                
+                git  url:' https://github.com/paulczar/spring-helloworld.git'
+            }
+        }
+        
+        stage("build") {
+            
+            steps{
+            
+                sh " mvn clean install"
+            
+            }
+        }
+        
+         stage("test") {
+            
+            steps{
+            
+                sh " mvn test"
+            
+            }
+        }
+        
 	 }
   
    echo "helloworld"
