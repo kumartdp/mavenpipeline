@@ -26,4 +26,6 @@ node('jenkins-master')
 
 
 return this
+	
+}
 
