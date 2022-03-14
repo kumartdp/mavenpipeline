@@ -22,8 +22,10 @@ node('jenkins-master')
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
-	export resultantpath=${result} '''
-	echo $resultantpath
+	export res=${result}
+	echo $res
+	'''
+	echo $res
 	
 		
 	 // sh 'groupId=readMavenPom().getGroupId()'
