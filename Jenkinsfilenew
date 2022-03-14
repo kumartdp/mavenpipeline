@@ -5,7 +5,7 @@ def pipeline
         git credentialsId: '' , branch: 'master', url: 'https://github.com/kumartdp/mavenpipeline.git'
          }
         pipeline = load 'mavenpipeline/pipeline.groovy'
-        pipeline.mavenversion()
+       
         pipeline.helloworld()
         pipeline.addition()
         pipeline.build()
