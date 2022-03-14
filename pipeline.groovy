@@ -20,6 +20,30 @@ def addition() {
    echo "helloworld"
   
 }
+def pomversion() {
+	stage('extract the pom version') {
+		node('jenkins-master'){
+			dir(.){
+			git  url:' https://github.com/paulczar/spring-helloworld.git'
+				
+		
+	env.groupId=readMavenPom().getGroupId()
+	env.artifactid=readMavenPom().getArtifactId()
+	env.find="."
+	env.replace="/"
+				
+	env.result=${$groupId//$find/$replace}/$artifactid
+	echo $result
+	}
+		}
+		}
+	}
+			
+			
+				
+		     
+	
+	
 
 	
 
@@ -45,19 +69,8 @@ def build() {
 		sh "ls -l"
 				 
 				 
-	def VERSION = readMavenPom().getVersion()
-	def groupId=readMavenPom().getGroupId()
-	def artifactid=readMavenPom().getArtifactId()
-	echo "##############groupid##########"
-	 echo groupId
-	echo "##############artifactid##########"
-	echo artifactid
-	echo "$groupId" | tr '.' '/'
-	//echo "$groupId" |  sed -r 's/['.']+/'/'/g
 	
-				 
-	//test=$("$groupId" | tr . /)
-	//echo "$test"
+	
 	
 				 
             
