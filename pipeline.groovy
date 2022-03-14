@@ -36,6 +36,8 @@ def mavenversion()
             
         }
 		 echo ""+${artifactid}
+		 
+	 }
 	
 	
 	
