@@ -14,7 +14,7 @@ node('jenkins-master')
 	env.artifactId=readMavenPom().getArtifactId()
 	env.res=''
 		script{
-	
+	sh'''
 	
 	echo $groupId
 
@@ -24,6 +24,8 @@ node('jenkins-master')
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
+	'''
+			echo $result
 	
 	
 		}
