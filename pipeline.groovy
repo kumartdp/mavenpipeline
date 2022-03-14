@@ -24,6 +24,7 @@ node('jenkins-master')
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
+	export res = $result
 	'''
 			echo $result
 	
