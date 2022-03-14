@@ -9,7 +9,7 @@ def pipeline
        
         pipeline.helloworld()
         pipeline.addition()
-        pipeline.build()
+        // pipeline.build()
         pipeline.deployimage()
         
         
