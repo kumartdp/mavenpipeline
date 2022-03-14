@@ -13,25 +13,16 @@ node('jenkins-master')
 	env.groupId=readMavenPom().getGroupId()
 	env.artifactId=readMavenPom().getArtifactId()
 	env.res=''
-		  def commit = sh (returnStdout: true, script: ''' echo hi''')
-		echo "${commit} "
-		script{
-	sh'''
-	
-	echo $groupId
-
+		  def commit = sh (returnStdout: true, script: ''' 
 	str=$groupId
 	find="."
 	replace="/"
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
-	echo $result
+	echo $result 
+	''')
+		echo "${commit} "
 	
-	'''
-			
-	
-	
-		}
 	// echo $result
 	// echo $groupId
 	
