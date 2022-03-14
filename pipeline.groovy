@@ -22,10 +22,6 @@ def addition() {
 }
 def mavenversion()
 {
-	def VERSION = readMavenPom().getVersion()
-	def groupId=readMavenPom().getGroupId()
-	def artifactid=readMavenPom().getArtifactId()
-	
 	
 	 node('jenkins-master') {
 	
@@ -33,9 +29,15 @@ def mavenversion()
            
                 
                 git  url:' https://github.com/paulczar/spring-helloworld.git'
+				 
+	def VERSION = readMavenPom().getVersion()
+	def groupId=readMavenPom().getGroupId()
+	def artifactid=readMavenPom().getArtifactId()
+				 echo ""+${artifactid}
+	
             
         }
-		 echo ""+${artifactid}
+		
 		 
 	 }
 	
