@@ -10,8 +10,10 @@ node('jenkins-master')
 			
 	git  url:' https://github.com/paulczar/spring-helloworld.git'
 	echo "okkk"
+	env.groupId=readMavenPom().getGroupId()
 	sh '''
-	groupId=readMavenPom().getGroupId()
+	echo $groupId
+
 	str="com.ge.avitas.gateway"
 	find="."
 	replace="/"
