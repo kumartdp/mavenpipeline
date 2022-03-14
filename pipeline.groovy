@@ -16,8 +16,8 @@ node('jenkins-master')
 	env.find="."
 	env.replace="/"
 				
-	env.result=${$groupId//$find/$replace}/$artifactid
-	echo $result
+	env.result="${$groupId//$find/$replace}/$artifactid"
+	echo "$result"
 
 		}
 	}
