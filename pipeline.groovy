@@ -42,6 +42,7 @@ def build() {
            
                 
                 git  url:' https://github.com/paulczar/spring-helloworld.git'
+		sh "ls -l"
 				 
 				 
 	def VERSION = readMavenPom().getVersion()
