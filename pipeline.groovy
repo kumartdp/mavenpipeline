@@ -21,9 +21,10 @@ def addition() {
   
 }
 def pomversion() {
-	stage('extract the pom version') {
+	
 		node('jenkins-master'){
-			dir(.){
+			stage('extract the pom version') {
+			
 			git  url:' https://github.com/paulczar/spring-helloworld.git'
 				
 		
@@ -34,7 +35,7 @@ def pomversion() {
 				
 	env.result=${$groupId//$find/$replace}/$artifactid
 	echo $result
-	}
+
 		}
 		}
 	}
