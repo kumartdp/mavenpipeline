@@ -20,6 +20,16 @@ def addition() {
    echo "helloworld"
   
 }
+def mavenversion()
+{
+	
+	def VERSION = readMavenPom().getVersion()
+	def groupId=readMavenPom().getGroupId()
+	def artifactid=readMavenPom().getArtifactId()
+	echo ""+${artifactid}
+	
+}
+	
 
 
 def build() {
