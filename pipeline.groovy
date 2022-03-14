@@ -11,16 +11,19 @@ node('jenkins-master')
 	git  url:' https://github.com/paulczar/spring-helloworld.git'
 	echo "okkk"
 	env.groupId=readMavenPom().getGroupId()
+	env.artifactId=readMavenPom().getArtifactId()
+	
 	sh '''
 	echo $groupId
 
-	str="com.ge.avitas.gateway"
+	str=$groupId
 	find="."
 	replace="/"
-	str2="apigateway-svc"
+	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
 	export res=${result} '''
+	echo $result
 	
 		
 	 // sh 'groupId=readMavenPom().getGroupId()'
