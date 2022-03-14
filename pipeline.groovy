@@ -9,15 +9,18 @@ node('jenkins-master')
 	{
 			
 	git  url:' https://github.com/paulczar/spring-helloworld.git'
+
+
+
 				
 		
-	env.groupId=readMavenPom().getGroupId()
-	env.artifactid=readMavenPom().getArtifactId()
-	env.find="."
-	env.replace="/"
+	sh(''groupId=readMavenPom().getGroupId()'')
+	sh(''artifactid=readMavenPom().getArtifactId()'')
+	sh(''find="." '')
+	sh(''replace="/" '')
 				
-	env.result=sh("${$groupId//$find/$replace}/$artifactid")
-	echo "$result"
+	sh(''result="${$groupId//$find/$replace}/$artifactid" '')
+	sh(''echo $result)
 
 		}
 	}
