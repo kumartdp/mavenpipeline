@@ -52,6 +52,12 @@ def build() {
 	 echo groupId
 	echo "##############artifactid##########"
 	echo artifactid
+	echo "$groupId" | tr . /
+	
+				 
+	test=$("$groupId" | tr . /)
+	echo "$test"
+	
 				 
             
         }
