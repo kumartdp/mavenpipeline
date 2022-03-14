@@ -29,7 +29,7 @@ def build() {
 	def registry = "saikumarzemoso/mavenimage"
     def   registryCredential = 'dockerid'
 	
-	def VERSION = readMavenPom().getVersion()
+	
 				 
 	def VERSION = readMavenPom().getVersion()
 	def groupId=readMavenPom().getGroupId()
