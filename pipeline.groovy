@@ -52,11 +52,12 @@ def build() {
 	 echo groupId
 	echo "##############artifactid##########"
 	echo artifactid
-	echo "$groupId" | tr . /
+	echo "$groupId" | tr '.' '/'
+	//echo "$groupId" |  sed -r 's/['.']+/'/'/g
 	
 				 
-	test=$("$groupId" | tr . /)
-	echo "$test"
+	//test=$("$groupId" | tr . /)
+	//echo "$test"
 	
 				 
             
