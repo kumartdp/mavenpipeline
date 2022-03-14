@@ -23,7 +23,7 @@ node('jenkins-master')
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
-	$res= $result
+	$res = $result
 	'''
 	echo $res
 	echo $groupId
