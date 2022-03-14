@@ -48,6 +48,8 @@ def build() {
 	def VERSION = readMavenPom().getVersion()
 	def groupId=readMavenPom().getGroupId()
 	def artifactid=readMavenPom().getArtifactId()
+	echo "##############artifactid##########"
+	 echo artifactid
             
         }
         
@@ -72,8 +74,7 @@ def build() {
  stage('Building image') {
       
           dockerImage = docker.build registry + ":"+ VERSION+".$BUILD_NUMBER"
-	 echo "##############artifactid##########"
-	 echo artifactid
+	
         
     }
     stage('Deploy Image') {
