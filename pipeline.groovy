@@ -31,9 +31,7 @@ def build() {
 	
 	
 				 
-	def VERSION = readMavenPom().getVersion()
-	def groupId=readMavenPom().getGroupId()
-	def artifactid=readMavenPom().getArtifactId()
+	
 				 
 	
 	 node('jenkins-master') {
@@ -44,6 +42,11 @@ def build() {
            
                 
                 git  url:' https://github.com/paulczar/spring-helloworld.git'
+				 
+				 
+	def VERSION = readMavenPom().getVersion()
+	def groupId=readMavenPom().getGroupId()
+	def artifactid=readMavenPom().getArtifactId()
             
         }
         
