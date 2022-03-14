@@ -2,12 +2,13 @@
 def pomversion() 
 {
 	
+stage('extract the pom version') 
+		{
+	
 node('jenkins-master')
 	{
-			stage('extract the pom version') 
-		{
 			
-			git  url:' https://github.com/paulczar/spring-helloworld.git'
+	git  url:' https://github.com/paulczar/spring-helloworld.git'
 				
 		
 	env.groupId=readMavenPom().getGroupId()
