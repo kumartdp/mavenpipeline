@@ -20,10 +20,13 @@ def addition() {
    echo "helloworld"
   
 }
-def pomversion() {
+def pomversion() 
+{
 	
-		node('jenkins-master'){
-			stage('extract the pom version') {
+		node('jenkins-master')
+	{
+			stage('extract the pom version') 
+		{
 			
 			git  url:' https://github.com/paulczar/spring-helloworld.git'
 				
@@ -47,7 +50,7 @@ def pomversion() {
 	
 
 	
-
+/*
 
 def build() {
 	
@@ -68,14 +71,7 @@ def build() {
                 
                 git  url:' https://github.com/paulczar/spring-helloworld.git'
 		sh "ls -l"
-				 
-				 
-	
-	
-	
-				 
-            
-        }
+		}
         
         stage("build") {
             
@@ -83,8 +79,7 @@ def build() {
             
                 sh " mvn clean install"
             
-            
-        }
+           }
         
          stage("test") {
             
@@ -110,13 +105,16 @@ def build() {
         
 	 }
 		 
-	 }
+	 
   
    echo "helloworld"
   
   
   
 }
+
+*/
+	
 def deployimage(){
   
    echo "helloworld"
