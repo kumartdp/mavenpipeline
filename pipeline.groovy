@@ -12,6 +12,7 @@ node('jenkins-master')
 	echo "okkk"
 	env.groupId=readMavenPom().getGroupId()
 	env.artifactId=readMavenPom().getArtifactId()
+	env.res=''
 	
 	sh '''
 	echo $groupId
@@ -22,12 +23,12 @@ node('jenkins-master')
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
-	export res=${result}
-	echo $res
+	
+	env.res= $result
 	'''
 	echo $res
 	
-		
+		// export res=${result}
 	 // sh 'groupId=readMavenPom().getGroupId()'
 	// sh 'artifactid=readMavenPom().getArtifactId()'
 	// echo "okkk2"
