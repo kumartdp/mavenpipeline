@@ -23,9 +23,9 @@ node('jenkins-master')
 	str2=$artifactId
 	result=${str//$find/$replace}/${str2}
 	echo $result
-	$res = $result
+	
 	'''
-	echo $res
+	echo $result
 	echo $groupId
 	
 		// export res=${result}
