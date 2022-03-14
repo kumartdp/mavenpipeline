@@ -13,6 +13,7 @@ node('jenkins-master')
 	env.groupId=readMavenPom().getGroupId()
 	env.artifactId=readMavenPom().getArtifactId()
 	env.res=''
+		script{
 	
 	sh '''
 	echo $groupId
@@ -25,8 +26,9 @@ node('jenkins-master')
 	echo $result
 	
 	'''
-	echo $result
-	echo $groupId
+		}
+	// echo $result
+	// echo $groupId
 	
 		// export res=${result}
 	 // sh 'groupId=readMavenPom().getGroupId()'
