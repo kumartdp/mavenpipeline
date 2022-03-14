@@ -15,7 +15,7 @@ node('jenkins-master')
 	env.res=''
 		script{
 	
-	sh '''
+	
 	echo $groupId
 
 	str=$groupId
@@ -25,7 +25,7 @@ node('jenkins-master')
 	result=${str//$find/$replace}/${str2}
 	echo $result
 	
-	'''
+	
 		}
 	// echo $result
 	// echo $groupId
