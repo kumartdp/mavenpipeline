@@ -20,30 +20,7 @@ def addition() {
    echo "helloworld"
   
 }
-def mavenversion()
-{
-	
-	 node('jenkins-master') {
-	
-		         stage("checkout") {
-           
-                
-                git  url:' https://github.com/paulczar/spring-helloworld.git'
-				 
-	def VERSION = readMavenPom().getVersion()
-	def groupId=readMavenPom().getGroupId()
-	def artifactid=readMavenPom().getArtifactId()
-				 echo artifactid
-	
-            
-        }
-		
-		 
-	 }
-	
-	
-	
-}
+
 	
 
 
@@ -53,6 +30,11 @@ def build() {
     def   registryCredential = 'dockerid'
 	
 	def VERSION = readMavenPom().getVersion()
+				 
+	def VERSION = readMavenPom().getVersion()
+	def groupId=readMavenPom().getGroupId()
+	def artifactid=readMavenPom().getArtifactId()
+				 
 	
 	 node('jenkins-master') {
 		 
@@ -86,6 +68,8 @@ def build() {
  stage('Building image') {
       
           dockerImage = docker.build registry + ":"+ VERSION+".$BUILD_NUMBER"
+	 echo "##############artifactid##########"
+	 echo artifactid
         
     }
     stage('Deploy Image') {
