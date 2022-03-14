@@ -48,8 +48,11 @@ def build() {
 	def VERSION = readMavenPom().getVersion()
 	def groupId=readMavenPom().getGroupId()
 	def artifactid=readMavenPom().getArtifactId()
+	echo "##############groupid##########"
+	 echo groupId
 	echo "##############artifactid##########"
-	 echo artifactid
+	echo artifactid
+				 
             
         }
         
