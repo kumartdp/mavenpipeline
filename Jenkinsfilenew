@@ -6,11 +6,7 @@ def pipeline
          }
         pipeline = load 'mavenpipeline/pipeline.groovy'
         pipeline.pomversion()
-       
-        pipeline.helloworld()
-        pipeline.addition()
-        // pipeline.build()
-        pipeline.deployimage()
+      
         
         
     }
