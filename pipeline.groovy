@@ -10,7 +10,7 @@ node('jenkins-master')
 			
 	git  url:' https://github.com/paulczar/spring-helloworld.git'
 	pom="pom.xml"
-	groupId=project.groupId
+	groupId=${project.groupId}
 	echo "ok1"
 	echo $groupId
 		
