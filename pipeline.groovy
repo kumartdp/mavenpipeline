@@ -10,7 +10,7 @@ node('jenkins-master')
 			
 	git  url:' https://github.com/paulczar/spring-helloworld.git'
 	pom="pom.xml"
-	groupId=${project.groupId}
+	groupId=echo -e 'setns x=http://maven.apache.org/POM/4.0.0\ncat /x:project/x:groupId/text()' | xmllint --shell pom.xml | grep -v 
 	echo "ok1"
 	echo $groupId
 		
